@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/Qui.css"/>
+		<link rel="stylesheet" type="text/css" href="static/fullcalendar/css/fullcalendar.css"/>
+		<link rel="stylesheet" type="text/css" href="static/fullcalendar/css/fullcalendar.print.css"/>
+	</head>
+	<body class="black_bg">
+		 <!--
+         	作者：qiang
+         	时间：2018-09-06
+         	描述：头部
+         -->
+        <div class="Qui_admin">
+         	
+	        <header class="Qui_header">
+	         	<div class="Qui_nav">
+	         		<div class="Qui_nav_container clearfix">
+	         			
+			         	<section class="logo">
+			         		<div>Qui</div>
+			         	</section>
+			         	<nav id="Qui_userbar" class="nav_bar nav_bar_left">
+			         		<ul class="clearfix">
+			         			<li><i class="iconfont icon-shensuoyou shrink_icon vertical"></i></li>
+			         			<li><i class="iconfont icon-person2"></i><span>qiang</span></li>
+			         			<li class="QuiDrop Qui_hide_xs">
+			         				<a href="javascript:;" class="dropDown_A"><span id="userName">admin</span> <i class="iconfont icon-xiala"></i> </a>
+			         				<ul class="Qui_drop_menu">
+			         					<li><a href="javascript:;">123</a></li>
+			         					<li><a href="javascript:;">123</a></li>
+			         					<li><a href="javascript:;">123</a></li>
+			         				</ul>
+			         			</li>
+			         			
+			         		</ul>
+			         	</nav>
+			         	<nav id="Qui_userbar" class="nav_bar nav_bar_right">
+			         		<ul class="clearfix">
+			         			<li class="Qui_hide_xs">
+			         				<a href="javascript:;">
+			         					
+			         					<i class="iconfont icon-tixing"></i><span>提醒</span>
+			         				</a>
+			         			</li>
+			         			<!--<li><i class="iconfont icon-person2"></i><span>qiang</span></li>-->
+			         			<!--<li class="QuiDrop">
+			         				<a href="#" class="dropDown_A"><span id="userName">admin</span> <i class="iconfont icon-xiala"></i> </a>
+			         				<ul class="Qui_drop_menu">
+			         					<li><a href="javascript:;">123</a></li>
+			         					<li><a href="javascript:;">123</a></li>
+			         					<li><a href="javascript:;">123</a></li>
+			         				</ul>
+			         			</li>-->
+			         			<li class="Qui_hide_xs"><a href="javascript:;"><i class="iconfont icon-sitting"></i><span>设置</span></a></li>
+			         			<li class="Qui_hide_xs"><a href="javascript:;" data-href='empower.html'><i class="iconfont icon-quanxian"></i><span>授权</span></a></li>
+			         			<li><a href="javascript:;"><i class="iconfont icon-tuichu"></i><span>退出</span></a></li>
+			         			<li class="li_more dn"><a href="javascript:;"><i class="iconfont icon-iconmore fz_20"></i></a></li>
+			         		</ul>
+			         	</nav>
+			         	
+			         	
+			         	
+	         		</div>
+		         	
+	         	</div>
+	         	
+	        </header>
+	         
+	         <!--左边代码开始-->
+	        <aside class="Qui_aside">
+	         	<div class="menu_dropdown">
+	         		
+		         	<div class="menu_list">
+		         		
+		         	</div>
+		         	
+		         	<!--加什么图标在这里，但是看不到，会动态添加的-->
+		            <div class="icon_box" style="display: none;">
+		            	<i class="sa-side iconfont icon-shouye"></i>
+		            	<i class="sa-side iconfont icon-gongzuotai"></i>
+		            	<i class="sa-side iconfont icon-hangzhengguanli"></i>
+		            	<i class="sa-side iconfont icon-shenpiliucheng"></i>
+		            	<i class="sa-side iconfont icon-stock"></i>
+		            	<i class="sa-side iconfont icon-browser"></i>
+		            	<i class="sa-side iconfont icon-browser"></i>
+		            	<i class="sa-side iconfont icon-browser"></i>
+		            </div>
+	         	</div>
+	        </aside>
+	        <div class="Qui_body box-shadow">
+	        	
+	        	<div class="Qui_card">
+	        		<a href="javascript:void(0);">
+	        			<cite>首页</cite>
+	        		</a>
+	        		<span Qui-separator>/</span>
+	        		<a>
+	        			<cite>设置</cite>
+	        		</a>
+	        		<!--<span Qui-separator>/</span>
+	        		<a>
+	        			<cite>设置</cite>
+	        		</a>-->
+	        	</div>
+	        	<section class="iframe_box">
+	        		
+	        	</section>
+	        	<div class="loader">
+	        		
+	        		<div class="spinner">
+					  <div class="bounce1"></div>
+					  <div class="bounce2"></div>
+					  <div class="bounce3"></div>
+					</div>
+	        	</div>
+	        </div>
+	        	
+        </div>
+        
+        <!--遮罩层-->
+        <div class="modal_popup" id="CloneLI">
+        	<div class="modal_back"></div>
+        	<div class="Qui_layer">
+        		<div class="layer_content">
+        			<ul class="layer_menu_ul">
+        				<li><a href="javascript:;"><i class="iconfont icon-sitting"></i><span>设置</span></a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </div>
+        
+	</body>
+	<script src="js/jQuery/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/wangEditor/wangEditor.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/paging.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer/2.4/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/fullcalendar/fullcalendar.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Qui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.dropDown_A').slider_bar({eve:'hover'});
+		var dataMenu = [
+		{"name":"首页","src":"table.html"},
+		{"id":4,"name":"组件","src":null,"checked":true,
+			"list":[{"id":15,"name":"表单","src":"energy_analysis.html","checked":true,
+						"list_c":[{"id":13,"name":"表单元素","src":"form.html","checked":true},{"id":13,"name":"表单表","src":"form_list.html","checked":true}],"pId":4},
+				{"id":16,"name":"分页","src":"historical_data.html","checked":true,"list":null,"pId":4},
+				{"id":17,"name":"导航","src":"operational_reports.html","checked":true,"list":null,"pId":4},
+				{"id":18,"name":"选项卡","src":"COP_analyze.html","checked":true,"list":null,"pId":4},
+				{"id":42,"name":"图片上传","src":"newMain.html","checked":true,"list":null,"pId":4},
+				{"id":50,"name":"表格","src":"doctordiagnosis.html","checked":true,"list":null,"pId":4},
+				{"id":50,"name":"日期与时间","src":"date.html","checked":true,"list":null,"pId":4},
+				{"id":50,"name":"日历","src":"calendar.html","checked":true,"list":null,"pId":4},
+				{"id":50,"name":"编辑器","src":"editor.html","checked":true,"list":null,"pId":4},
+				],"pId":0}
+		];
+		
+		$('.menu_list').addMenu(dataMenu);
+	    $(".Qui_aside").Quifold({
+			titcell:'.menu_dropdown dl dt',
+			maincell:'.menu_dropdown dl dd',
+		});
+		
+//		$(".iframe_box").load('table.html');
+//		console.log(window.location.hash);
+//		console.log(window.location.host);
+		console.log(window.location.search='a='+1);
+		
+	</script>
+</html>

@@ -1,0 +1,44 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,span { margin:0; padding:0;box-sizing: border-box; }
+body { /*background:#fff; color:#555; */font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { /*color:#555; */text-decoration:none; }
+a:hover { text-decoration:none; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+table { border-collapse:collapse; }
+/*html {overflow-y: scroll;}*/
+i,cite,em,var,address,dfn{font-style:normal;}
+/* 清除浮动 */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+:root{
+/*	--backColor:#3e3e3e;*/
+	/*--backColor:#0C183E;*/
+	--backColor:#15a2a2;
+	--themback: #111c4e;
+	--height:60px;
+	--color:#ddd;
+	
+}
+::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+	border-radius: 10px;
+	 -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	background: #15a2a2;
+}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	border-radius: 10px;
+	background: #EDEDED;
+}
+.black_bg{
+	background-color: #0F131F;
+    background-color: #f1f1f1;
+}
+

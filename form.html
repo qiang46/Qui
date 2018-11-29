@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link rel="stylesheet" type="text/css" href="css/Qui.css"/>-->
+	</head>
+	<body>
+		<div class="Qui_fluid">
+			
+			<div class="Qui_row clearfix Qui_row_space15">
+				<div class="Qui-col-md6">
+					
+					<div class="Qui_block">
+						<div class="Qui_block_header">输入框</div>
+						<div class="Qui_block_body clearfix Qui_row_space10">
+							<div class="Qui-col-md12">
+								<input type="text" name="" id="text_1" value="" class="Qui_input_text" placeholder="请输入" />
+							</div>
+							<div class="Qui-col-md6">
+								<input type="text" name="" id="username" value="" class="Qui_input_text" placeholder="用户名" />
+							</div>
+							<div class="Qui-col-md6">
+								<input type="password" name="" id="password" value="" class="Qui_input_text" placeholder="密码" />
+							</div>
+						</div>
+					</div>
+					<div class="Qui_block">
+						<div class="Qui_block_header">文本域</div>
+						<div class="Qui_block_body clearfix Qui_row_space10">
+							<div class="Qui-col-md12">
+								<textarea name="" rows="" cols="" class="Qui_textarea" placeholder="请输入"></textarea>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="Qui-col-md6">
+					
+					<div class="Qui_block">
+						<div class="Qui_block_header">复选框</div>
+						<div class="Qui_block_body clearfix Qui_row_space10 Qui_form">
+							<div class="Qui-col-md12">
+								<input type="checkbox" id="check" checked="checked" title="读书" value="读书1" />
+								<input type="checkbox" id="check_1" value="1"/>
+								<input type="checkbox" id="check_2" value="1" disabled="disabled" title="禁选中"/>
+							</div>
+							<div class="Qui-col-md12">
+								<input type="checkbox" id="check" checked="checked" title="读书" Qskin="primary" value="读书2" />
+								<input type="checkbox" id="check_1" value="1" Qskin="primary"/>
+								<input type="checkbox" id="check_2" value="1" Qskin="primary"  title="禁选中" disabled="disabled"/>
+							</div>
+							<div class="Qui-col-md12">
+								
+								<button id="b1" class="theme_color">获取值</button>
+							</div>
+							
+							<!--<form class="Qui_form">
+								<div class="Qui_checkbox">
+									
+									<input type="checkbox" id="check" checked="checked" title="读书" />
+									
+									
+									<input type="checkbox" id="check_1" value="1"/>
+									
+									
+								</div>
+							</form>-->
+						</div>
+					</div>
+					
+					<!--开关-->
+					<div class="Qui_block">
+						<div class="Qui_block_header">开关</div>
+						<div class="Qui_block_body clearfix Qui_row_space10 Qui_form">
+							<div class="Qui-col-md12">
+								<input type="checkbox" id="check" checked="checked" title="读书" value="读书1" Qskin="switch" Qtext="是|否" />
+								<input type="checkbox" id="check_1" value="1" Qskin="switch"/>
+								<input type="checkbox" id="check_2" value="1" disabled="disabled" title="禁选中" Qskin="switch"/>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="Qui_block">
+						<div class="Qui_block_header">单选框</div>
+						<div class="Qui_block_body clearfix Qui_row_space10 Qui_form">
+							<div class="Qui-col-md12">
+									<input type="radio" id="radio_1" name="lex" title="男" value="男"/>
+									<input type="radio" id="radio_2" name="lex" title="女" value="女"/>
+									
+									<input type="radio" id="radio_3" value="1" name="lex" title="都不是" disabled="disabled"/>
+							</div>
+							<div class="Qui-col-md12">
+								
+								<button id="b2" class="theme_color">获取值</button>
+							</div>
+							<!--<form class="Qui_form">
+								<div class="Qui_checkbox">
+									
+									<input type="radio" id="radio_1" checked="checked" name="lex" />
+									
+									
+									<input type="radio" id="radio_2" value="1" name="lex"/>
+									
+									
+									<input type="radio" id="radio_3" value="1" name="lex"/>
+								</div>
+							</form>-->
+						</div>
+					</div>
+					
+					<div class="Qui_block">
+						<div class="Qui_block_header">下拉框</div>
+						<div class="Qui_block_body clearfix Qui_row_space10 Qui_form">
+							<div class="Qui-col-md6">
+								<select name="city" Qui_verify="">
+					              <option value="">请选择一个城市</option>
+					              <option value="010">北京</option>
+					              <option value="021" disabled="disabled">上海</option>
+					              <option value="0571">杭州</option>
+					            </select>
+					            
+					            
+							</div>
+							<div class="Qui-col-md6">
+								<select name="city" Qui_verify="required" Qui_search="">
+					              <option value="">带搜索的选择框</option>
+					              <option value="1">layer</option>
+					              <option value="2">form</option>
+					              <option value="3">layim</option>
+					              <option value="4">element</option>
+					              <option value="5">laytpl</option>
+					              <option value="6">upload</option>
+					              <option value="7">laydate</option>
+					              <option value="8">laypage</option>
+					              <option value="9">flow</option>
+					              <option value="10">util</option>
+					              <option value="11">code</option>
+					              <option value="12">tree</option>
+					              <option value="13">layedit</option>
+					              <option value="14">nav</option>
+					              <option value="15">tab</option>
+					              <option value="16">table</option>
+					              <option value="17">select</option>
+					              <option value="18">checkbox</option>
+					              <option value="19">switch</option>
+					              <option value="20">radio</option>
+					            </select>
+							</div>
+							<div class="Qui-col-md12">
+								<select name="city" Qui_verify="" Qui_filter='city_my' id="city_my">
+					              <option value="">请选择一个城市</option>
+					              <option value="010" selected="selected">北京</option>
+					              <option value="021">上海</option>
+					              <option value="0571">杭州</option>
+					            </select>
+					            
+					            
+							</div>
+							<div class="Qui-col-md12">
+								
+								<button id="b3" class="theme_color">获取值</button>
+							</div>
+							
+							<div class="Qui_form_item">
+								<label for="" class="Qui_label color_white">地区选择:</label>
+								<div class="Qui_form_inline">
+									<select id="province" name="province" Qui_filter='province'>
+										<option>请选择省</option>
+									</select>
+								</div>
+								<div class="Qui_form_inline">
+									<select id="city" Qui_filter='city'>
+										<option>请选择市</option>
+									</select>
+								</div>
+								<div class="Qui_form_inline">
+									<select id="area">
+										<option>请选择区</option>
+									</select>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+					
+				</div>
+				
+				<!--<div class="Qui-col-md6">
+					
+					<div class="Qui_block">
+						<div class="Qui_block_header">输入框</div>
+						<div class="Qui_block_body">
+							
+							
+						</div>
+					</div>
+				</div>-->
+				
+			</div>
+		</div>
+
+
+
+
+	</body>
+	<script src="js/city.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			Quiform();
+			Quiform().CheckboxVal('#b1');
+			Quiform().RadioVal('#b2');
+	       	$('#b3').click(function(){
+	       		console.log($("select[name=city]  option:selected").val());
+//	       		console.log($("select[name=city]").val());
+	       	});
+	       	
+	       	//选择市联动
+			Quiform().on('select(city_my)', function(data) {
+            	console.log(data);
+            });
+            
+            //保存省
+			var provinceArray = new Array();
+			//保存市
+			var cityArray = new Array();
+			var cityList;
+			 
+			var provinceTag = document.getElementById("province");
+			var cityTag = document.getElementById("city");
+			var areaTag = document.getElementById("area");
+	       	for(var i=0; i<provinceList.length; i++){
+				var province = provinceList[i];
+				var provinceName = province.name;
+				provinceArray[i]=provinceName;
+				provinceTag.add(new Option(provinceName,i));
+			}
+	       	var pQ = Quiform();
+		 	pQ.on('select(province)', function(data) {
+            	console.log(data);
+            	chooseProvince($(data.elem)[0]);
+				pQ.render('select');
+            });
+			
+			//选择市联动
+			pQ.on('select(city)', function(data) {
+            	chooseCity($(data.elem)[0]);
+				pQ.render('select');
+            });
+			//选择省
+			function chooseProvince(th){
+				var index = th.selectedIndex-1;
+				var provinceName = provinceArray[index];
+				
+				for(var n=0; n<provinceList.length; n++){
+					var provice = provinceList[n];
+					if (provice.name == provinceName){
+						cityList = provice.cityList;
+						cityTag.innerHTML="";
+						for(var c=0; c<cityList.length; c++){
+							var city = cityList[c];
+							var cityName = city.name;
+							cityArray[c] = cityName;
+							cityTag.add(new Option(cityName,c));
+							}
+						}
+				}
+				var cityName = cityArray[0];
+				var city1 = cityList[0];
+				var areaList = city1.areaList;
+				areaTag.innerHTML="";
+				for(var a=0; a<areaList.length; a++){
+					var area = areaList[a];
+					areaTag.add(new Option(area,a));
+				}
+			}
+			//选择市
+			function chooseCity(tag){
+				var index2 = tag.selectedIndex;
+				var cityName = cityArray[index2];
+				for(var m=0; m<cityList.length; m++){
+					var city1 = cityList[m];
+					if (city1.name == cityName){
+						var areaList = city1.areaList;
+						areaTag.innerHTML="";
+						for(var a=0; a<areaList.length; a++){
+							var area = areaList[a];
+							areaTag.add(new Option(area,a));
+						}
+					}
+				}
+			}
+		});
+	</script>
+</html>

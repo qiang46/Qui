@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link rel="stylesheet" type="text/css" href="css/Qui.css"/>-->
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<!--<button class="add_btn theme_color"><i class="iconfont icon-zengjia"></i>添加</button>-->
+		<div class="fixed-table-body">
+			
+			<div class="toolbar">
+				<button class="add_btn theme_color"><i class="iconfont icon-zengjia"></i>添加</button>
+				<button class="edit_btn default"><i class="iconfont icon-Group-"></i>编辑</button>
+				<button class="delete_btn danger"><i class="iconfont icon-delete"></i>删除</button>
+				<button class="refresh_btn default"><i class="iconfont icon-delete"></i>刷新</button>
+			</div>
+			<div class="tab_box Quitable"></div>
+			<div class="pageBox" id="pageBox1"></div>
+			
+		</div>
+	</body>
+	<!--<script src="js/jQuery/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Qui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/paging.js" type="text/javascript" charset="utf-8"></script>-->
+	<script type="text/javascript">
+		var $tab;
+		var $page;
+		var page = 1;
+		getData(page,10);
+		function getData(page,size){
+			
+			$.ajax({
+				type:"get",
+				url:"http://localhost:8090/equipmentLedger/findAll",
+				data:{
+					page:page,
+					rows:size
+				},
+				async:true,
+				dataType:'jsonp',
+				success:function(data){
+					console.log(data.rows);
+					var list = data.rows;
+//					getList(list,page,data);
+					var option = {
+						striped:true,
+//						singleSelect:true,//单选
+						rownumbers:false,//编号
+						columns:[[
+						{
+							
+							field:'ck',
+							checkbox:true,
+						},
+						{
+							
+							field:'id',
+							title:'ID',
+						},
+						{
+							
+							field:'equipmentName',
+							title:'设备名',
+						},{
+							
+							field:'equipmentNumber',
+							title:'编号',
+						},{
+							
+							field:'system',
+							title:'系统',
+//							width:200
+						},{
+							
+							field:'installationLocation',
+							title:'安装位置',
+						},{
+							
+							field:'equipmentTypeName',
+							title:'设备类型名',
+//							formatter:function(val,row,i){
+//								console.log(val);
+//								console.log(row);
+//								console.log(i);
+//							}
+						},
+						{
+							field : 'monitoring',
+							align : 'center',
+							title : '是否监控',
+//							formatter : function(value, row, index) {
+//								console.log(value);
+//								console.log(row);
+//								console.log(index);
+//								if(row.monitoring==="是"){
+//									return 1;
+//								}else{
+//									return 0;
+//								}
+//							}
+						}
+							
+						]]
+					}
+					$tab = $('.tab_box').datalist(option,list);
+//					$tab.getList(option,list);
+					
+					
+					if(data.total>10){
+						
+						getpage(page,data,size);
+					}
+				},
+				error:function(data){
+					console.log(data);
+				}
+			});
+		}
+//		$('.tab_box tbody tr').change(function(){
+//			console.log($tab.checkData);
+//			
+//		});
+		$('.add_btn').click(function(){
+			console.log($tab.checkData);
+//			refresh();
+			$page.reload();
+		});
+		$('.refresh_btn').click(function(){
+			
+			window.location.reload(true);
+		});
+		function getpage(page,data,size){
+			
+			var options = {
+				pageNo:page,
+				totalSize: data.total,
+				size: size,
+				pList:[5,10,20],
+				listShow:true,
+				callback:function(page,size){
+					getData(page,size);
+				}
+			}
+//			$('#pageBox1').pager(options);
+			$page = $('#pageBox1').pager(options);
+		}
+		function refresh(){
+		 	var num = $(".Qiu_iptNum").val();
+			console.log(num);
+			getData(num,5);
+		}
+	</script>	
+</html>

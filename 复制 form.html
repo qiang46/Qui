@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link rel="stylesheet" type="text/css" href="css/Qui.css"/>-->
+	</head>
+	<body>
+		<div class="Qui_fluid">
+			
+			<div class="Qui_row clearfix Qui_row_space15">
+				<div class="Qui-col-md6">
+					
+					<div class="Qui_block">
+						<div class="Qui_block_header">输入框</div>
+						<div class="Qui_block_body clearfix Qui_row_space10">
+							<div class="Qui-col-md12">
+								<input type="text" name="" id="" value="" class="Qui_input_text" placeholder="请输入" />
+							</div>
+							<div class="Qui-col-md6">
+								<input type="text" name="" id="" value="" class="Qui_input_text" placeholder="用户名" />
+							</div>
+							<div class="Qui-col-md6">
+								<input type="password" name="" id="" value="" class="Qui_input_text" placeholder="密码" />
+							</div>
+						</div>
+					</div>
+					<div class="Qui_block">
+						<div class="Qui_block_header">文本域</div>
+						<div class="Qui_block_body clearfix Qui_row_space10">
+							<div class="Qui-col-md12">
+								<textarea name="" rows="" cols="" class="Qui_textarea" placeholder="请输入"></textarea>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="Qui-col-md6">
+					
+					<div class="Qui_block">
+						<div class="Qui_block_header">复选框</div>
+						<div class="Qui_block_body clearfix Qui_row_space10">
+							
+							<form class="Qui_form">
+								<div class="Qui_checkbox Qui_form">
+									
+									<input type="checkbox" id="check" checked="checked" />
+									<label for="check">
+										<span>毒蝎</span>
+									</label>
+									
+									<input type="checkbox" id="check_1" value="1"/>
+									<label for="check_1">
+										<span>毒蝎</span>
+									</label>
+									
+								</div>
+							</form>
+						</div>
+					</div>
+					
+					<div class="Qui_block">
+						<div class="Qui_block_header">单选框</div>
+						<div class="Qui_block_body clearfix Qui_row_space10">
+							
+							<form class="Qui_form">
+								<div class="Qui_checkbox">
+									
+									<input type="radio" id="radio_1" checked="checked" name="lex" />
+									<label for="radio_1">
+										<span>毒蝎</span>
+									</label>
+									
+									<input type="radio" id="radio_2" value="1" name="lex"/>
+									<label for="radio_2">
+										<span>毒蝎</span>
+									</label>
+									
+									<input type="radio" id="radio_3" value="1" name="lex"/>
+									<label for="radio_3">
+										<span>毒蝎z</span>
+									</label>
+								</div>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+				
+				<!--<div class="Qui-col-md6">
+					
+					<div class="Qui_block">
+						<div class="Qui_block_header">输入框</div>
+						<div class="Qui_block_body">
+							
+							
+						</div>
+					</div>
+				</div>-->
+				
+			</div>
+		</div>
+
+
+
+
+	</body>
+	<script type="text/javascript">
+		!function form(){
+			var DISAB = "disabled";
+			var items = {
+				checkbox:function(){
+					var Class = {
+						checkbox:["Qui_form_checkbox","Qui_form_checked","checkbox"],
+						_switch:["Qui_form_switch", "Qui_form_onswitch", "switch"]
+					};
+					var checks = $('.Qui_form').find('input[type=checkbox]');
+					checks.each(function(i,item){
+						var me = $(this),
+						skin = me.attr("Q_skin"),
+						disabled = this.disabled;
+						t = me.attr('title');
+						if(skin === "switch"){
+							skin = '_'+skin;
+						}
+						var Reclass = Class[skin]||Class.checkbox;
+						
+						//替代元素
+						var ReSe = me.next("."+Reclass[0]);
+						var reElm = $(['<div class="Qui_unselect '+ Reclass[0] + (item.checked ? (' '+Reclass[1]) : '') + (disabled ? ' Qui_checkbox_disbaled '+DISAB : '') +'">'
+          ,{
+            _switch: '<i></i>'
+          }[skin] || ('<span>'+ (check.title || '勾选') +'</span><i class="Qui_icon"></i>')
+          ,'</div>'].join(''));
+						
+						ReSe[0] && ReSe.remove();//如果已经渲染
+						me.after(reElm);
+						
+					});
+				}
+			};
+			
+			$.each(items, function(k,item) {
+				item();
+			});
+		}();
+	</script>
+</html>

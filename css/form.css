@@ -1,0 +1,515 @@
+/*input::-ms-input-placeholder,input::-webkit-input-placeholder,input::-moz-placeholder{*/
+    /* placeholder颜色  */
+    /*color: #ddd;*/
+    /* placeholder字体大小  */
+    /*font-size: 12px;*/
+    /* placeholder位置  */
+    /*text-align: right;*/
+/*}*/
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{ /*WebKit browsers*/
+
+	color: #ddd;
+
+}
+
+input::-moz-input-placeholder,textarea::-moz-input-placeholder{ /*Mozilla Firefox*/
+
+	color: #ddd;
+
+}
+
+input::-ms-input-placeholder,textarea::-ms-input-placeholder{ /*Internet Explorer*/ 
+
+	color: #ddd;
+
+}
+
+
+/*新表单样式*/
+.Qui_form{
+	display: inline-block;
+	font-family: 'iconfont';
+}
+/*.Qui_form input[type='checkbox'],.Qui_form input[type='radio']{*/
+.Qui_form input[type='checkbox'],.Qui_form input[type='radio'],.Qui_form select{
+    display: none;
+    
+}
+
+.Qui_label,.Qui_input_block.Qui_input_line,.Qui_form_select,.Qui_textarea{
+	position: relative;
+}
+
+.Qui_input_text, .Qui_select, .Qui_textarea,.Qui_input{
+	width: 100%;
+	height: 38px;
+	line-height: 1.3;
+	border-width: 1px;
+    border-style: solid;
+    border-color: #e4e4e4;
+    background-color: #fff;
+    border-radius: 2px;
+    padding-left: 10px;
+}
+.Qui_input_text:focus,.Qui_textarea:focus,.Qui_input:focus{
+	outline-color: #15a2a2;
+}
+.Qui_textarea{
+	min-height: 100px;
+	height: auto;
+	line-height: 20px;
+	padding: 5px 10px;
+	resize: vertical;
+}
+
+.Qui_input{
+	display: block;
+	width: 100%;
+	padding-left: 10px;
+}
+
+.Qui_disabled, .Qui_disabled:hover {
+    color: #d2d2d2!important;
+    cursor: not-allowed!important;
+}
+.Qui_icon, .Qui_unselect {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+
+.Qui_form_checkbox, .Qui_form_checkbox *, .Qui_form_switch,.Qui_inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+/*复选框*/
+.Qui_form_checkbox{
+	  position: relative;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    padding-right: 30px;
+    cursor: pointer;
+    font-size: 0;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    box-sizing: border-box;
+}
+.Qui_form_checkbox span {
+    padding: 0 10px;
+    height: 100%;
+    font-size: 14px;
+    border-radius: 2px 0 0 2px;
+    background-color: #d2d2d2;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Qui_form_checkbox i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 28px;
+    border: 1px solid #d2d2d2;
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.Qui_form_checkbox i::before{
+	content: '\e6c1';
+}
+.Qui_form_checkbox:hover i {
+    border-color: #c2c2c2;
+    color: #c2c2c2;
+}
+
+.Qui_form_checkbox:hover span {
+    background-color: #c2c2c2;
+}
+/*选中*/
+.Qui_form_checked span, .Qui_form_checked:hover span {
+    background-color: #15a2a2;
+}
+.Qui_form_checked i, .Qui_form_checked:hover i {
+    color: #15a2a2;
+}
+/*禁选*/
+.Qui_checkbox_disbaled, .Qui_checkbox_disbaled i {
+    border-color: #e2e2e2!important;
+}
+.Qui_checkbox_disbaled, .Qui_checkbox_disbaled:hover {
+    color: #d2d2d2!important;
+    cursor: not-allowed!important;
+}
+.Qui_checkbox_disbaled span {
+    background-color: #e2e2e2!important;
+}
+.Qui_checkbox_disbaled:hover i {
+    color: #fff!important;
+}
+
+/*皮肤2*/
+.Qui_form_checkbox[Qskin=primary] {
+    height: auto!important;
+    line-height: normal!important;
+    min-width: 18px;
+    min-height: 18px;
+    border: none!important;
+    margin-right: 0;
+    padding-left: 28px;
+    padding-right: 0;
+    background: 0 0;
+}
+.Qui_form_checkbox[Qskin=primary] span {
+    padding-left: 0;
+    padding-right: 15px;
+    line-height: 18px;
+    background: 0 0;
+    color: #666;
+}
+.Qui_form_checkbox[Qskin=primary] i {
+    right: auto;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border: 1px solid #d2d2d2;
+    font-size: 12px;
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-transition: .1s linear;
+    transition: .1s linear;
+}
+.Qui_form_checkbox[Qskin=primary]:hover i {
+    border-color: #15a2a2;
+    color: #fff;
+}
+.Qui_form_checked[Qskin=primary] i {
+    border-color: #15a2a2;
+    background-color: #15a2a2;
+    color: #fff;
+}
+.Qui_form_checked[Qskin=primary] i {
+    border-color: #15a2a2;
+    background-color: #15a2a2;
+    color: #fff;
+}
+.Qui_checkbox_disbaled[Qskin=primary] span {
+    background: 0 0!important;
+    color: #c2c2c2;
+}
+
+/*开关样式*/
+.Qui_form_switch{
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	min-width: 70px;
+	padding: 0 10px;
+	margin-top: 5px;
+	border: 1px solid #d2d2d2;
+	cursor: pointer;
+	background-color: #d2d2d2;
+	border-radius: 2px;
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.Qui_form_onswitch{
+	border-color: #15a2a2;
+  background-color: #15a2a2;
+	border-color: var(--backColor);
+	background-color: var(--backColor);
+}
+.Qui_form_switch em{
+	position: absolute;
+	right: 0;
+	top: 0;
+	/*padding: 0 10px;*/
+	width: 40px;
+	height: 100%;
+  	color: #fff;
+  	overflow: hidden;
+ 	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	text-align: center;
+}
+.Qui_form_onswitch em{
+	right: auto;
+	left: 0;
+}
+.Qui_form_switch i{
+	position: absolute;
+	left: 0;
+  	top: 0;
+ 	width: 30px;
+  	height: 28px;
+  	color: #fff;
+  	background-color: #fff;
+  	border-color: #fff;
+}
+.Qui_form_onswitch i{
+	left: auto;
+	right: 0;
+}
+.Qui_form_switch.Qui_checkbox_disbaled{
+	background-color: #e2e2e2;
+}
+
+/*单选框*/
+.Qui_form_radio, .Qui_form_radio * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.Qui_form_radio{
+	line-height: 28px;
+    margin: 6px 10px 0 0;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 0;
+}
+.Qui_form_radio>i{ 
+    /*display:block;*/
+    width: 18px;  
+    height: 18px;  
+    border-radius: 50%;
+    color: #fff;  
+    border: 1px solid #858585;  
+    box-sizing:border-box;
+    text-align: center;
+    position: relative;
+    margin-right: 8px;
+}
+.Qui_form_radio *{
+	font-size: 14px;
+}
+/*单选选中时*/
+.Qui_radio_check>i{
+	border-color: #15a2a2;
+}
+.Qui_radio_check>i:before{
+	content:'\e604';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+}
+.Qui_form_radio>i:hover,.Qui_radio_check>i:before {
+    color: #15a2a2;
+    border-color: #15a2a2;
+}
+/*单选禁选中*/
+.Qui_radio_disabled,.Qui_radio_disabled>i,.Qui_radio_disabled>i:before,.Qui_radio_disabled>span {
+    color: #d2d2d2!important;
+    cursor: not-allowed!important;
+    border-color: #d2d2d2;
+}
+.Qui_radio_disabled>i:hover
+{
+	border-color: #d2d2d2;
+}
+
+
+/*下拉框*/
+.Qui_edge{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-width: 6px;
+	border-style: dashed;
+	border-color: transparent;
+	overflow: hidden;
+}
+.Qui_form_select .Qui_input{
+	padding-right: 30px;
+	cursor: pointer;
+	/*-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;*/
+}
+.Qui_form_select .Qui_edge{
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	margin-top: -3px;
+	cursor: pointer;
+	border-width: 6px;
+	border-top-color: #C2C2C2;
+	border-top-style: solid;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+}
+.Qui_form_selected .Qui_edge {
+    margin-top: -9px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin-top: -3px\9;
+}
+.Qui_form_select dl {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 42px;
+    padding: 5px 0;
+    z-index: 899;
+    min-width: 100%;
+    border: 1px solid #d2d2d2;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+    box-sizing: border-box;
+}
+.Qui_form_selected dl {
+    display: block;
+}
+.Qui_form_selected dl dd {
+    cursor: pointer;
+}
+.Qui_form_selected dl dd:hover {
+    background-color: #f2f2f2;
+    -webkit-transition: .5s all;
+    transition: .5s all;
+}
+.Qui_form_selected dl dd.Qui_this {
+    background-color: #15a2a2;
+    color: #fff;
+}
+.Qui_form_selected dl dd, .Qui_form_selected dl dt {
+    padding: 0 10px;
+    line-height: 36px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Qui_form_selected dl dd.Qui_disabled {
+    background-color: #fff;
+}
+.Qui_anim{
+	animation: Qui_anim .5s none;
+}
+
+.Qui_hide {
+    display: none!important;
+}
+.Qui_select_none {
+    margin: 5px 0;
+    text-align: center;
+    color: #999;
+}
+
+
+@keyframes Qui_anim{
+	from{
+		transform: translate3d(0,30px,0);
+	}
+	to{
+		transform: translate3d(0,0px,0);
+	}
+}
+
+/*表单块*/
+.Qui_form_item{
+	margin-bottom: 10px;
+	clear: both;
+	*zoom: 1;
+}
+.Qui_form_item::after{
+	content: '';
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	display: block;
+}
+.Qui_form_item .Qui_inline {
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+.Qui_form_label {
+    width: 110px;
+    padding: 8px 15px;
+    height: 38px;
+    line-height: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px 0 0 2px;
+    text-align: center;
+    background-color: #FBFBFB;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+/*.Qui_input_inline{*/
+.Qui_form_item .Qui_form_inline{
+	float: left;
+    width: 190px; 
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+label.Qui_label{
+	float: left;
+    display: block;
+    padding: 9px 15px;
+    width: 80px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: right;
+}
+.Qui_input_block{
+	position: relative;
+	margin-left: 110px;
+    min-height: 36px;
+}
+
+
+
+
+
+/*.radiobox
+{
+    position: relative;
+    padding-left: 8px;
+    cursor: pointer;
+}
+.radiobox:before{
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -2px;
+    left: 6px;
+}
+.radiobox input[type=radio]:checked:before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #999;
+    position: absolute;
+    top: 4px;
+    left: 12px;
+}
+.radiobox input[type=radio]{
+    margin-right: 6px;
+}*/
+
+
+
+
+
+
+
+
