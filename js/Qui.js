@@ -398,6 +398,38 @@
 		});
 	}
 	
+	//序列化转换
+	$.fn.serializeObject = function()
+	{
+		var o = {};
+		var a = this.serializeArray();
+		$.each(a, function() {
+			if (o[this.name] !== undefined) {
+				if (!o[this.name].push) {
+					o[this.name] = [o[this.name]];
+				}
+				o[this.name].push(this.value || null);
+			} else {
+				o[this.name] = this.value || null;
+			}
+		});
+		return o;
+	};
+	
+	//序列化清除input框数据
+	
+	function clearVal(ele){
+		var ipt = $(ele).find("input");
+		ipt.each(function(i,el) {
+	//		console.log(el);
+			if($(this).attr("type")==="checkbox"){
+				$(this).prop("checked",false);
+			}else{
+				$(this).val('');
+			}
+		});
+	}
+	
 	
 	//判断是否是数组
 	function isArray(o){
