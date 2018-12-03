@@ -1934,3 +1934,71 @@ function DateRange(ele1,ele2){
 	    return currentdate;
 	}
 }
+
+//弹出层
+function Msg(){
+	this.init();
+}
+Msg.prototype = {
+	init:function(){
+		
+		this.box = document.createElement('div');
+		this.box.id = 'Qui_box';
+		this.box.style.cssText = 'position: fixed;width: 100%;height: 100%;top: 0;right: 0;bottom: 0;left: 0;z-index: 1;overflow: hidden;-webkit-overflow-scrolling: touch;outline: 0;display:none';
+		document.body.appendChild(this.box);
+		this.back = document.createElement('div');
+		this.back.style.cssText = 'width: 100%;height: 100%;background: rgba(0, 0, 0, 0.2);position: absolute;op: 0;right: 0;left: 0;z-index: 2;';
+		this.box.appendChild(this.back);
+		this.boxMain = document.createElement('div');
+		this.boxMain.style.cssText = 'position: absolute;top: 50%;left: 59%;z-index: 3;transform: translate(-50%,-50%);background: #fff;border-radius: 2px;padding:20px 40px;box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);border: 4px solid #f89002;text-align: center;border-radius: 4px;';
+		this.box.appendChild(this.boxMain);
+		this.icon = document.createElement('div');
+		this.icon.style.cssText = 'width: 40px;height: 40px;border-radius: 50px;line-height: 40px;color: #fff;text-align: center;position: relative;flex-shrink: 0;background-color: #f89002;border: 4px solid #ffd07a;margin: 0 auto;font-family: iconfont;margin-bottom: 6px;';
+		this.boxMain.appendChild(this.icon);
+		this.textBox = document.createElement('p');
+		this.boxMain.appendChild(this.textBox);
+		this.hide();
+	},
+	warn:function(msg){
+		this.MsgShow();
+		this.icon.innerHTML = '&#xe6c1';
+		this.textBox.style.color = 'rgb(248, 144, 2)';
+		this.icon.style.fontSize = '20px';
+		this.icon.style.lineHeight = '35px';
+		this.icon.innerHTML = '!';
+		this.textBox.innerText = msg;
+	},
+	success:function(msg){
+		this.MsgShow();
+		this.boxMain.style.border = '4px solid #1fce11';
+		this.textBox.style.color = '#1fce11';
+		this.icon.style.backgroundColor = '#1fce11';
+		this.icon.style.border = '4px solid #63ea58';
+		this.icon.style.fontSize = '20px';
+		this.icon.style.lineHeight = '35px';
+		this.icon.innerHTML = '&#xe6c1';
+		this.textBox.innerText = msg;
+	},
+	error:function(msg){
+		this.MsgShow();
+		this.boxMain.style.border = '4px solid #e20000';
+		this.textBox.style.color = '#e20000';
+		this.icon.style.backgroundColor = '#e20000';
+		this.icon.style.border = '4px solid rgb(255, 125, 125)';
+		this.icon.style.fontSize = '20px';
+		this.icon.style.lineHeight = '32px';
+		this.icon.innerHTML = '&#xe603;';
+		this.textBox.innerText = msg;
+	},
+	hide:function(){
+		this.back.onclick = function(){
+			this.parentNode.style.display = 'none';
+		}
+	},
+	MsgShow:function(){
+		var that =this;
+		that.box.style.display = 'block';
+		setTimeout(function(){that.box.style.display = 'none';}, 4000);
+	}
+};
+var ot = new Msg();
