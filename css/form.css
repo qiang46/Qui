@@ -432,6 +432,8 @@ input::-ms-input-placeholder,textarea::-ms-input-placeholder{ /*Internet Explore
     margin-right: 10px;
 }
 .Qui_form_label {
+	float: left;
+	display: block;
     width: 110px;
     padding: 8px 15px;
     height: 38px;
@@ -443,6 +445,7 @@ input::-ms-input-placeholder,textarea::-ms-input-placeholder{ /*Internet Explore
     background-color: #FBFBFB;
     overflow: hidden;
     box-sizing: border-box;
+    border-color: #e6e6e6;
 }
 /*.Qui_input_inline{*/
 .Qui_form_item .Qui_form_inline{
@@ -467,6 +470,7 @@ label.Qui_label{
 	position: relative;
 	margin-left: 110px;
     min-height: 36px;
+    left: -1px;
 }
 
 
